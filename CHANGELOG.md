@@ -1,3 +1,7 @@
+### 3.0.0
+
+- modernize and skip the transpilations. only support new node versions
+
 ### 2.0.4
 
 - transpile also esm
