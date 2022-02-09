@@ -1,21 +1,23 @@
-const fs = require('fs')
-const path = require('path')
+import { readFileSync } from 'fs'
 
-module.exports = {
+const parseJSON = fname => JSON.parse(readFileSync(new URL(fname, import.meta.url)))
+const parseXML = fname => readFileSync(new URL(fname, import.meta.url)).toString().replace(/\n$/, '')
+
+export default {
   example: {
-    js: require('./example.json'),
-    tmx: fs.readFileSync(path.join(__dirname, 'example.tmx')).toString().replace(/\n$/, '')
+    js: parseJSON('./example.json'),
+    tmx: parseXML('example.tmx')
   },
   example_no_ns: {
-    js: require('./example_no_ns.json'),
-    tmx: fs.readFileSync(path.join(__dirname, 'example_no_ns.tmx')).toString().replace(/\n$/, '')
+    js: parseJSON('./example_no_ns.json'),
+    tmx: parseXML('example_no_ns.tmx')
   },
   example_multi: {
-    js: require('./example_multi.json'),
-    tmx: fs.readFileSync(path.join(__dirname, 'example_multi.tmx')).toString().replace(/\n$/, '')
+    js: parseJSON('./example_multi.json'),
+    tmx: parseXML('example_multi.tmx')
   },
   example_sdl_tm8_format: {
-    js: require('./example_sdl_tm8_format.json'),
-    tmx: fs.readFileSync(path.join(__dirname, 'example_sdl_tm8_format.tmx')).toString().replace(/\n$/, '')
+    js: parseJSON('./example_sdl_tm8_format.json'),
+    tmx: parseXML('example_sdl_tm8_format.tmx')
   }
 }

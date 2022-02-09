@@ -1,10 +1,10 @@
-const expect = require('expect.js')
-const fixtures = require('./fixtures')
+import expect from 'expect.js'
+import fixtures from './fixtures/index.js'
+import * as lib from '../index.js'
 
 function test (what, t) {
   describe(what, () => {
-    it('index', t(require('../')[what]))
-    it('direct', t(require('../cjs/' + what)))
+    it('index', t(lib[what]))
   })
 }
 
