@@ -1,5 +1,5 @@
 {
-  "name": "tmexchange",
+  "name": "@l10nmonster/tmexchange",
   "version": "3.0.0",
   "description": "tmx2js and js2tmx converter tmx utils",
   "type": "module",
@@ -32,6 +32,13 @@
   "homepage": "http://locize.com",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/locize/tmexchange.git"
+    "url": "git+https://github.com/l10nmonster/tmexchange.git"
+  },
+  "bugs": {
+    "url": "https://github.com/l10nmonster/tmexchange/issues"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "test"
   }
 }
