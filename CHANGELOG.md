@@ -1,3 +1,7 @@
+### 3.0.1
+
+- remove dependency to package.json (which prevents bundling in a single file)
+
 ### 3.0.0
 
 - modernize and skip the transpilations. only support new node versions

@@ -1,6 +1,6 @@
 {
   "name": "@l10nmonster/tmexchange",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "tmx2js and js2tmx converter tmx utils",
   "type": "module",
   "main": "index.js",
